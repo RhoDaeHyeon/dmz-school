@@ -91,3 +91,12 @@
 @media(max-width:1050px){.proposal-card-grid .inquiry-actions{grid-template-columns:1fr;gap:10px}}
 @media(max-width:760px){.inquiry-contact>.inquiry-actions{grid-template-columns:1fr}.inquiry-help-content{grid-template-columns:1fr;padding:4px 18px 18px;gap:0}.inquiry-qr,.inquiry-desktop-tip,.inquiry-desktop-label{display:none}.inquiry-mobile-label{display:inline}.inquiry-help>summary{font-size:14px;padding:16px 18px}.inquiry-help-text p{font-size:14px!important}.inquiry-actions .button{font-size:15px!important}}
 /* END INQUIRY METHODS */
+
+/* INQUIRY CARD BUTTON FIT 20261128 */
+.inquiry-actions{min-width:0;max-width:100%}
+.inquiry-actions .button{min-width:0;max-width:100%;box-sizing:border-box;white-space:normal;overflow-wrap:anywhere;word-break:keep-all}
+.proposal-card-grid .proposal-consult{display:block;min-width:0;width:100%;max-width:100%;box-sizing:border-box}
+.proposal-card-grid .proposal-consult>p{margin:0 0 16px;max-width:100%;word-break:keep-all;overflow-wrap:anywhere}
+.proposal-card-grid .proposal-consult .inquiry-actions{width:100%;grid-template-columns:minmax(0,1fr);gap:10px}
+.proposal-card-grid .proposal-consult .inquiry-actions .button{width:100%;min-height:52px;height:auto;white-space:normal;line-height:1.65;padding:13px 12px!important}
+/* END INQUIRY CARD BUTTON FIT */
