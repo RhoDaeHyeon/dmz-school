@@ -13,3 +13,6 @@ document.addEventListener('click',function(e){const link=e.target.closest('a[hre
 window.addEventListener('hashchange',revealCurrent);revealCurrent();
 const picker=document.querySelector('details.proposal-picker');if(picker){const label=picker.querySelector('[data-picker-label]');const update=function(){label.textContent=picker.open?'예시 교육과정 접기':'예시 교육과정 보기';};picker.addEventListener('toggle',update);update();}
 })();
+
+/* Inquiry copy action; no messages or data are sent automatically. */
+(function(){document.addEventListener('click',async function(event){const button=event.target.closest('button[data-inquiry-copy]');if(!button)return;const status=button.closest('.inquiry-help').querySelector('.inquiry-copy-status');try{if(!navigator.clipboard||!navigator.clipboard.writeText)throw new Error('unavailable');await navigator.clipboard.writeText(button.dataset.inquiryCopy);status.textContent='이메일 주소를 복사했습니다. 사용하시는 메일의 받는 사람에 붙여 넣어 주세요.';}catch{status.textContent='자동 복사가 되지 않았습니다. 위 이메일 주소를 직접 선택해 복사해 주세요.';}});})();
